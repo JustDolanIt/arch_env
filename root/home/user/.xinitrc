@@ -1,0 +1,10 @@
+xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation" 1
+xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Button" 2
+xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Timeout" 200
+xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Axes" 6 7 4 5
+xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Middle Button Emulation" 1
+xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Middle Button Timeout" 50
+#xrandr --output LVDS1 --scale 1.1x1.1
+[[ -f ~/.Xsessionrc ]] && xrdb -merge ~/.Xsessionrc
+xscreensaver -no-splash &
+exec awesome

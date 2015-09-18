@@ -1,0 +1,63 @@
+;Notation:
+;e_ - external, need to create additional dictionary, depends on machine
+;r_ - remove package
+;c_ - config required
+;a_ - AUR
+;
+;--Instalation
+dosfstools ;for EFI partition
+gdisk ;to create GPT partition table
+grub ;bootloader
+efibootmgr ;for EFI working in GRUB
+a_yaourt ;pacman on steroids (work with AUR)
+;--Day to day packages
+dnsutils ;host, dig and other
+acpi ;to get battery charge
+dialog ;wifi packages
+wpa_supplicant
+iw
+wifi-menu ;for an easy wifi setup
+c_vim ;because I can't live in vi
+sudo ;living in root is not OK
+tmux ;pretty usefull terminal multiplexor
+r_vi ;remove vi, make link on vim
+git ;well it is pretty sad to live without git
+htop ;like it more then top
+mlocate ;simplifies search
+wget ;file downloader
+openssh ;remote access to servers
+a_dropbox ;cloud file storages
+a_yandex-disk
+unzip ;windows archives
+c_kdb-ru-keymaps ;russian symbols in console ;;/etc/vconsole.conf
+bash-completion ;tab tab
+system-config-printer ;set printer on system
+;--GUI
+c_xorg-server ;xorg
+xorg-xinit ;startx
+xorg-fonts-cyrillic ;font for russian display
+c_xorg-xinput ;trackpoin support
+e_videodriver ;external, depends on videocard (lscpi | grep -e VGA -e 3D)
+c_xorg-xrdb ;Xres
+xorg-xset xorg-xlsfonts ttf-linux-libertine ;fonts
+xorg-xbacklight ;backlight managment
+c_awesome ;window manager
+spacefm gksu udisks2 ;file manager + extensions
+xcreensaver ;lockscreen
+c_xkeyboard ;layout change in X
+xsel ;clipboard
+;--Office
+libreoffice-fresh ;office itself
+apvlv ;pdf/djvu reader
+;--Multimedia
+feh ;pictures viewer + extensions
+imagemagick ;screenshots and much more
+pulseaudio ;sound server
+pulseaudio-alsa ;backend config for alsa
+pavucontrol ;GUI config for pulseaudio
+vlc ;video, audio
+calibre ;books collection manager and converter
+;--Development
+geany ;IDE
+ipython3 ;advanced interactive shell for python 3
+;Other
