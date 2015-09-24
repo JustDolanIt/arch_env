@@ -126,7 +126,7 @@ menubar.utils.terminal = terminal -- Set the terminal for applications that requ
 
 -- {{{ Wibox
 -- Create a textclock widget
-mytextclock = awful.widget.textclock()
+mytextclock = awful.widget.textclock(" %a %d-%m-%y %H:%M ", 10)
 
 -- Create a wibox for each screen and add it
 mywibox = {}
@@ -283,8 +283,7 @@ globalkeys = awful.util.table.join(
                 client.focus:raise()
             end
         end),
-    -- Buttons for volume control #TODO
-    awful.key({ }, "XF86AudioRaiseVolume", function () inc_volume(volume_widget) end), -- ThinkPad specific
+    awful.key({ }, "XF86AudioRaiseVolume", function () inc_volume(volume_widget) end),
     awful.key({ }, "XF86AudioLowerVolume", function () dec_volume(volume_widget) end),
     awful.key({ }, "XF86AudioMute", function() mute_volume(volume_widget) end),
 
