@@ -46,6 +46,7 @@ spacefm gksu udisks2 ;file manager + extensions
 xcreensaver ;lockscreen
 c_xkeyboard ;layout change in X
 xsel ;clipboard
+a_skb ;will show what layout you are using
 ;--Office
 libreoffice-fresh ;office itself
 apvlv ;pdf/djvu reader

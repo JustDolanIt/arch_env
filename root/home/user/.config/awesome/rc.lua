@@ -223,8 +223,22 @@ for s = 1, screen.count() do
     )    
     battery_widgettimer:start()
 
+    -- Layout widget (uses skb)
+    layout_widget = wibox.widget.textbox()    
+    layout_widgettimer = timer({ timeout = 1 })    
+    layout_widgettimer:connect_signal("timeout",    
+      function()    
+        fh = assert(io.popen("skb -", "r"))    
+        layout_widget:set_text(fh:read("*l"))    
+        fh:close()    
+      end    
+    )    
+    layout_widgettimer:start()
+
     local right_layout = wibox.layout.fixed.horizontal()
     if s == 1 then right_layout:add(wibox.widget.systray()) end
+    right_layout:add(spacer)
+    right_layout:add(layout_widget)
     right_layout:add(spacer)
     right_layout:add(mytextclock)
     right_layout:add(spacer)
@@ -314,7 +328,12 @@ globalkeys = awful.util.table.join(
                   awful.util.getdir("cache") .. "/history_eval")
               end),
     -- Menubar
-    awful.key({ modkey }, "p", function() menubar.show() end)
+    awful.key({ modkey }, "p", function() menubar.show() end),
+    -- Lock
+    awful.key({ modkey, "Control" }, "l", 
+            function()
+                awful.util.spawn("xscreensaver-command -lock", false)
+            end)
 )
 
 clientkeys = awful.util.table.join(
