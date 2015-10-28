@@ -12,6 +12,7 @@ efibootmgr ;for EFI working in GRUB
 a_yaourt ;pacman on steroids (work with AUR)
 ;--Day to day packages
 dnsutils ;host, dig and other
+net-tools ;netstat
 acpi ;to get battery charge
 dialog ;wifi packages
 wpa_supplicant
@@ -62,4 +63,5 @@ calibre ;books collection manager and converter
 geany ;IDE
 ipython3 ;advanced interactive shell for python 3
 ;Other
-a_chromium-pepper-flash
+a_chromium-pepper-flash ;chromium flash player
+gsmartcontrol ;smartctl
