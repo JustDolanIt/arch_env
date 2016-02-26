@@ -33,6 +33,9 @@ unzip ;windows archives
 c_kdb-ru-keymaps ;russian symbols in console ;;/etc/vconsole.conf
 bash-completion ;tab tab
 system-config-printer ;set printer on system
+sysdig ;htop + iotop + ...
+linux-header
+linux-lts-headers
 ;--GUI
 c_xorg-server ;xorg
 xorg-xinit ;startx
