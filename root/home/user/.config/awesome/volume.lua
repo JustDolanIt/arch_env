@@ -3,6 +3,7 @@
  ---------------------------------
  
  local awful = require("awful")
+ local wibox = require("wibox")
  
  -- Color constants
  local normal_color = '#33cc33'
@@ -65,9 +66,10 @@
  
  function create_volume_widget()
      -- Define volume widget
-     volume_widget = awful.widget.progressbar()
+     volume_widget = wibox.widget.progressbar()
      volume_widget:set_width(8)
-     volume_widget:set_vertical(true)
+     volume_widget:set_height(8)
+--     volume_widget:set_vertical(true)
      volume_widget:set_border_color('#666666')
  
      -- Init the widget
