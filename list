@@ -34,8 +34,9 @@ c_kdb-ru-keymaps ;russian symbols in console ;;/etc/vconsole.conf
 bash-completion ;tab tab
 system-config-printer ;set printer on system
 sysdig ;htop + iotop + ...
-linux-header
+linux-header ;needed for dkms
 linux-lts-headers
+cmus ;console music player
 ;--GUI
 c_xorg-server ;xorg
 xorg-xinit ;startx
@@ -51,6 +52,7 @@ xcreensaver ;lockscreen
 c_xkeyboard ;layout change in X
 xsel ;clipboard
 a_skb ;will show what layout you are using
+termite ;terminal emulator
 ;--Office
 libreoffice-fresh ;office itself
 apvlv ;pdf/djvu reader

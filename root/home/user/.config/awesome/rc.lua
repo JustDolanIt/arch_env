@@ -46,6 +46,7 @@ beautiful.init("/usr/share/awesome/themes/zenburn/theme.lua")
 -- This is used later as the default terminal and editor to run.
 terminal = "xterm"
 editor = os.getenv("EDITOR") or "vi"
+browser = "firefox"
 editor_cmd = terminal .. " -e " .. editor
 
 -- Default modkey.
@@ -81,11 +82,15 @@ tags = {
         'Browser',
         'Skype',
         'Misc',
+        'Misc 2',
+        'Misc 3',
         },
     layout = {
         layouts[1], -- Term tile
         layouts[4], -- Browser max
         layouts[1], -- Skype tile
+        layouts[1], -- Misc tile
+        layouts[1], -- Misc tile
         layouts[1], -- Misc tile
     }
 }
@@ -300,6 +305,8 @@ globalkeys = awful.util.table.join(
     awful.key({ }, "XF86AudioRaiseVolume", function () inc_volume(volume_widget) end),
     awful.key({ }, "XF86AudioLowerVolume", function () dec_volume(volume_widget) end),
     awful.key({ }, "XF86AudioMute", function() mute_volume(volume_widget) end),
+    -- Printscreen to /tmp
+    awful.key({ }, "Print", function() awful.util.spawn("import /tmp/screen.png",false) end),
 
     -- Standard program
     awful.key({ modkey,           }, "Return", function () awful.util.spawn(terminal) end),
